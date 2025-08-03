@@ -92,4 +92,3 @@ if st.button("Predecir"):
     pred_prob = modelo.predict_proba(entrada_esc)[:,1][0]
     pred_clase = modelo.predict(entrada_esc)[0]
     st.write(f"**Probabilidad de necesitar ventilación mecánica (12-72h):** {pred_prob*100:.2f}%")
-    st.write("**Resultado:** " + ("Sí" if pred_clase == 1 else "No"))
